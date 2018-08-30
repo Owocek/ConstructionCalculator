@@ -12,24 +12,10 @@
     <title>Reinforced concrete slab form</title>
 </head>
 <body>
-<form:form method="post" modelAttribute="table2_1">
-    <%--OTRZYMUJE CAŁY OBIEKT, NIE WIEM JAK OTRZYMAĆ KONKRETNĄ WARTOŚĆ--%>
-    <%--<form:select path="yc" items="${table2_1}"></form:select>--%>
+<form:form method="post" modelAttribute="table21">
 
-    <form:label path="yc">Częściowy współczynnik bezpieczeństwa dla betonu:</form:label>
-    <form:radiobuttons path="yc" items="${listOfYc}"></form:radiobuttons>
-
-    <form:label path="yc">Częściowy współczynnik bezpieczeństwa dla stali:</form:label>
-    <form:radiobuttons path="ys" items="${listOfYs}"></form:radiobuttons>
-
-</form:form>
-<form:form method="post" modelAttribute="table3_1">
-
-    <%--<form:label path="fck">Charakterystyczna wytrzymałość betonu na ściskanie</form:label>--%>
-    <%--<form:radiobuttons path="fck" items="${listOfFck}"></form:radiobuttons>--%>
-
-    <%--<form:label path="fckCube">Charakterystyczna wytrzymałość betonu na ściskanie:</form:label>--%>
-    <%--<form:radiobuttons path="fckCube" items="${listOfFckCube}"></form:radiobuttons>--%>
+    <form:label path="yc"> </form:label>
+    <form:select path="yc" items="${table2_1}"></form:select>
 
 </form:form>
 </body>

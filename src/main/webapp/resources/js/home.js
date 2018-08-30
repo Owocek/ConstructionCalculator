@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    // Handler for .ready() called.
-    var tooltips = document.querySelectorAll(".tooltip");
+$(document).ready(function () {
 
-    function show() {
-        console.log("działa");
-        tooltips.dataset.text;
-    }
+    var tooltip = $(".tooltip");
 
-    // function hide(id) {
-    //     document.getElementById(id).style.visibility = "hidden";
-    // }
+    tooltip.on("mouseover", function () {
+        var dataText = $(this).data("text");
+        var createDiv = $("<div class='tooltipText'>" + dataText + "</div>");
+        $(this).append(createDiv);
+    });
+
+    tooltip.on("mouseout", function () {
+        $(this).children(".tooltipText").remove();
+    });
+
 });

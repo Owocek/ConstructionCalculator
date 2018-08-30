@@ -1,9 +1,8 @@
 package pl.kalkulatorBudowlany.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class EN_1992_Table_2_1N {
@@ -16,7 +15,7 @@ public class EN_1992_Table_2_1N {
     private double yc;
     private double ys;
 
-    // GETTERSl
+    // GETTERS
 
     public long getId() {
         return id;
@@ -28,5 +27,14 @@ public class EN_1992_Table_2_1N {
 
     public double getYs() {
         return ys;
+    }
+
+    @Override
+    public String toString() {
+        return "EN_1992_Table_2_1N{" +
+                "id=" + id +
+                ", yc=" + yc +
+                ", ys=" + ys +
+                '}';
     }
 }

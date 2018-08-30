@@ -27,7 +27,9 @@ public class EN_1992_Table_3_1 {
     private double epsilon_c3;
     private double epsilon_cu3;
 
-    // GETTERSgit
+    // GETTERS
+
+
 
 
     public long getId() {
@@ -88,5 +90,26 @@ public class EN_1992_Table_3_1 {
 
     public double getEpsilon_cu3() {
         return epsilon_cu3;
+    }
+
+    @Override
+    public String toString() {
+        return "EN_1992_Table_3_1{" +
+                "id=" + id +
+                ", fck=" + fck +
+                ", fckCube=" + fckCube +
+                ", fcm=" + fcm +
+                ", fctm=" + fctm +
+                ", fctk005=" + fctk005 +
+                ", fctk095=" + fctk095 +
+                ", Ecm=" + Ecm +
+                ", epsilon_c1=" + epsilon_c1 +
+                ", epsilon_cu1=" + epsilon_cu1 +
+                ", epsilon_c2=" + epsilon_c2 +
+                ", epsilon_cu2=" + epsilon_cu2 +
+                ", n=" + n +
+                ", epsilon_c3=" + epsilon_c3 +
+                ", epsilon_cu3=" + epsilon_cu3 +
+                '}';
     }
 }
