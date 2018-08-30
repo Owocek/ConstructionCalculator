@@ -42,6 +42,11 @@ public class SlabController {
         return "/reinforcedConcreteSlab/form";
     }
 
+    @GetMapping("")
+    public String mainPage(){
+        return "index";
+    }
+
     @PostMapping("/form")
     public String postFrom(HttpServletRequest request, Model model){
 
