@@ -1,15 +1,24 @@
 $(document).ready(function () {
 
-    var tooltip = $(".tooltip");
+    var tooltip = $(".imageDiv");
 
-    tooltip.on("mouseover", function () {
-        var dataText = $(this).data("text");
-        var createDiv = $("<div class='tooltipText'>" + dataText + "</div>");
-        $(this).append(createDiv);
+    tooltip.on({
+        mousedown: function() {
+            $("#informationText").empty();
+            $("#informationButton").empty();
+
+        },
+        mouseup: function () {
+            var dataText = $(this).data("text");
+            $("#informationText").append($("#informationText").innerHTML = dataText);
+
+            var buttonAddress = $(this).data("button");
+            var createButton = $("<a href='" + buttonAddress + "'><div class='startCalcButton'></div></a>");
+            $("#informationButton").append(createButton);
+        }
+
     });
 
-    tooltip.on("mouseout", function () {
-        $(this).children(".tooltipText").remove();
-    });
+
 
 });
