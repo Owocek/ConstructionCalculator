@@ -10,11 +10,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:url value="/resources/js/home.js" var="js"/>
+<c:url value="/resources/js/showInformationOnClick.js" var="js"/>
 <c:url value="/resources/css/style.css" var="css"/>
 <html>
 <head>
     <title>Construction Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
     <script type="text/javascript" src="${js}"></script>
     <link href="${css}" type="text/css" rel="stylesheet">
 </head>
@@ -46,7 +49,7 @@
                 To do list: <br>
                 1. javascript - display info in div 'information' after click on 'projects' div <br>
                 2. same thing but clicking on divs 'menu' <br>
-                3. newly created div 'information' should have button 'start calculations' <br>
+                3. (newly created?) div 'information' should have button 'start calculations' <br>
                 (only for 'project' divs) <br>
                 4. create few divs in footer (linkedin profile etc.) <br>
                 5. do front-end to form and result <br>
@@ -56,7 +59,15 @@
             </div>
             <div id="projects">
                 <div class="scrolls">
-                    <div class="imageDiv">Concrete slab</div>
+
+                    <div class="imageDiv"
+                         data-text="
+     Średnica prętów górnych: <br>
+     Norma: PN 1992-1-1:2004+AC:2008 <br>
+     Załącznik C.1 - Tabela C.2"
+                        data-button="/form">
+                        Concrete slab
+                    </div>
                     <div class="imageDiv">Soon :)</div>
                     <div class="imageDiv">Soon :)</div>
                     <div class="imageDiv">Soon :)</div>
@@ -68,7 +79,11 @@
         </div>
 
         <div id="information">
-
+            <div id="informationHeader">Calculation info</div>
+            <div id="informationText"></div>
+            <div id="informationButton">
+                <%--<div class="startCalcButton"></div>--%>
+            </div>
         </div>
         <div style='clear:both;'></div>
     </div>

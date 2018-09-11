@@ -10,7 +10,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:url value="/resources/js/home.js" var="js"/>
+<c:url value="/resources/js/showInformationOnMouseOver.js" var="js"/>
 <c:url value="/resources/css/style.css" var="css"/>
 <html>
 <head>
