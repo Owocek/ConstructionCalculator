@@ -13,7 +13,7 @@ $(document).ready(function () {
             $("#informationText").append($("#informationText").innerHTML = dataText);
 
             var buttonAddress = $(this).data("button");
-            var createButton = $("<a href='" + buttonAddress + "'><div class='startCalcButton'></div></a>");
+            var createButton = $("<a href='" + buttonAddress + "'><div class='startCalcButton'>Start calc</div></a>");
             $("#informationButton").append(createButton);
         }
 
