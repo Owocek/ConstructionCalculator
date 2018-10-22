@@ -6,14 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import pl.kalkulatorBudowlany.entity.*;
 import pl.kalkulatorBudowlany.model.FactorsDTO;
 import pl.kalkulatorBudowlany.model.ValuesDTO;
 import pl.kalkulatorBudowlany.repository.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
